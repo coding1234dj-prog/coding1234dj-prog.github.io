@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>劉弘翔 - 程式魔法卷軸</title>
+  <title>第一章 - 古老魔法卷軸</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English+SC&family=UnifrakturMaguntia&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel&family=MedievalSharp&family=Almendra+SC&display=swap');
 
     body {
       margin: 0;
       padding: 0;
       background: #1a0f0a url('https://www.transparenttextures.com/patterns/wood-pattern.png') repeat;
-      color: #3e2a1a;
-      font-family: 'IM Fell English SC', serif;
+      color: #000000; /* 改成黑色文字，更奇幻手寫感 */
+      font-family: 'Almendra SC', serif; /* 更奇幻的中世紀風字體 */
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -35,43 +35,29 @@
       transform: rotate(-1deg);
     }
 
-    .scroll::before, .scroll::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 60px;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent);
-      left: 0;
-      z-index: 1;
-    }
-
-    .scroll::before { top: -30px; }
-    .scroll::after { bottom: -30px; transform: scaleY(-1); }
-
     h1 {
       font-family: 'UnifrakturMaguntia', cursive;
       font-size: 4em;
-      color: #8b4513;
-      text-shadow: 2px 2px 5px #000;
+      color: #000000;
+      text-shadow: 2px 2px 4px rgba(139,69,19,0.5);
       text-align: center;
-      margin: 0 0 40px;
+      margin: 0 0 20px;
       letter-spacing: 4px;
     }
 
-    .chapter {
-      font-size: 2.5em;
-      font-family: 'Cinzel', serif;
-      color: #b8860b;
+    .subtitle {
+      font-size: 1.8em;
+      color: #1a1a1a;
       text-align: center;
-      margin: 60px 0 30px;
-      text-shadow: 0 0 15px #ffd700;
+      margin-bottom: 40px;
+      font-family: 'MedievalSharp', cursive;
     }
 
+    /* 章節分隔線可以用圖片取代 */
     .divider {
       text-align: center;
       margin: 40px 0;
     }
-
     .divider img {
       width: 80%;
       max-width: 600px;
@@ -79,73 +65,75 @@
     }
 
     p {
-      font-size: 1.4em;
-      line-height: 1.8;
+      font-size: 1.5em;
+      line-height: 1.9;
       text-align: justify;
-      margin: 25px 0;
+      margin: 30px 0;
     }
 
-    .glow {
-      text-shadow: 0 0 15px #ffd700;
-      color: #ffd700;
+    /* 翻頁按鈕 */
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 60px 0 20px;
+      padding: 0 40px;
     }
 
-    a.magic-link {
-      color: #b8860b;
-      text-decoration: none;
-      border-bottom: 2px dotted #8b4513;
-      padding: 2px 5px;
-      transition: all 0.3s;
-      font-weight: bold;
+    .navigation a {
+      display: block;
+      width: 120px;
+      transition: transform 0.3s;
     }
 
-    a.magic-link:hover {
-      color: #ffd700;
-      text-shadow: 0 0 15px #ffd700;
-      border-bottom: 2px solid #ffd700;
-      background: rgba(139,69,19,0.3);
+    .navigation a:hover {
+      transform: scale(1.15);
+    }
+
+    .navigation img {
+      width: 100%;
+      height: auto;
     }
 
     .seal {
       text-align: center;
-      margin-top: 80px;
+      margin-top: 50px;
       font-size: 2em;
-      color: #b8860b;
-      text-shadow: 0 0 10px #ffd700;
+      color: #000000;
+      font-family: 'Cinzel', serif;
     }
   </style>
 </head>
 <body>
   <div class="scroll">
-    <h1 class="glow">程式魔法卷軸</h1>
-    <p style="text-align:center; font-size:1.6em;">劉弘翔 編撰於 2026 年</p>
-
-    <div class="chapter glow">第一章　11401_CS203A 課程卷軸</div>
-    <p class="glow" style="text-align:center; font-size:1.8em;">學號：1100860</p>
+    <h1>第一章：初入魔法森林</h1>
+    <div class="subtitle">課程介紹與基礎概念</div>
     
+    <!-- 可選：加一個黑色奇幻分隔圖 -->
     <div class="divider">
-      <img src="https://www.gutenberg.org/files/45332/45332-h/images/figure36.jpg" alt="章節裝飾">
+      <img src="images/divider-black.png" alt="章節分隔">
     </div>
-
-    <p>在此卷軸之開端，記錄勇者劉弘翔於 11401_CS203A 課程的啟程。掌握程式咒語，踏上知識之冒險。</p>
-    <p>這裡將記錄所有學習心得、魔法公式（程式碼）與獲得的寶物（作業）。</p>
-
-    <!-- 你可以複製下面這段來新增第二章、第三章... -->
-    <div class="chapter glow">第二章　範例章節（請修改）</div>
     
-    <div class="divider">
-      <img src="https://chairish-prod.freetls.fastly.net/image/product/master/ff4d5ebb-7073-47b1-b74c-7f5cc603cd9c/after-racinet-medieval-floral-ornament-illuminated-manuscript-motifs-plate-xlviii-1869-print-9892" alt="章節裝飾">
+    <p>這裡寫你的學習內容、程式碼、作業心得……</p>
+    <p>文字現在是深黑色，更像古老魔法書的手寫墨跡。</p>
+    <p>你可以加程式碼：</p>
+    <pre style="background:#000; color:#ffd700; padding:20px; border-radius:10px; font-family:monospace;">
+cout << "召喚第一道咒語！" << endl;</pre>
+
+    <div class="seal">✦ 第一章 ✦</div>
+
+    <!-- 翻頁導航 -->
+    <div class="navigation">
+      <!-- 上一章（如果沒有就連結回目錄） -->
+      <a href="index.html">
+        <img src="images/page-left.png" alt="上一頁">
+      </a>
+      
+      <!-- 下一章 -->
+      <a href="chapter2.html">
+        <img src="images/page-right.png" alt="下一頁">
+      </a>
     </div>
-
-    <p>這裡寫你的學習筆記內容...</p>
-    <p>參考魔法卷軸（外部連結）：</p>
-    <ul>
-      <li><a href="https://example.com" class="magic-link" target="_blank">✦ Python 基礎咒語手冊</a></li>
-      <li><a href="https://github.com/your-repo" class="magic-link" target="_blank">✦ 我的作業寶庫</a></li>
-      <li><a href="https://www.youtube.com/watch?v=example" class="magic-link" target="_blank">✦ 課程教學影片</a></li>
-    </ul>
-
-    <div class="seal">✦ 此卷軸持續更新中 ✦</div>
   </div>
 </body>
 </html>
