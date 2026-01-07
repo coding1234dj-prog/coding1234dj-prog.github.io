@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>劉弘翔 - 古老魔法卷軸</title>
+  <title>劉弘翔 - 程式魔法卷軸</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English+SC&family=UnifrakturMaguntia&display=swap');
 
@@ -25,14 +25,11 @@
       max-width: 900px;
       margin: 40px auto;
       padding: 80px 60px;
-      background: url('https://www.transparenttextures.com/patterns/cream-paper.png') repeat,
-                  #f5e6d3;
+      background: url('https://www.transparenttextures.com/patterns/cream-paper.png') repeat, #f5e6d3;
       background-blend-mode: multiply;
       border: 20px solid transparent;
       border-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png') 30 stretch;
-      box-shadow: 
-        inset 0 0 30px rgba(0,0,0,0.4),
-        0 0 40px rgba(139,69,19,0.6);
+      box-shadow: inset 0 0 30px rgba(0,0,0,0.4), 0 0 40px rgba(139,69,19,0.6);
       position: relative;
       border-radius: 20px;
       transform: rotate(-1deg);
@@ -57,24 +54,28 @@
       color: #8b4513;
       text-shadow: 2px 2px 5px #000;
       text-align: center;
-      margin: 0 0 20px;
+      margin: 0 0 40px;
       letter-spacing: 4px;
     }
 
-    .subtitle {
-      font-size: 1.6em;
-      color: #5c3a1a;
+    .chapter {
+      font-size: 2.5em;
+      font-family: 'Cinzel', serif;
+      color: #b8860b;
       text-align: center;
-      margin-bottom: 40px;
-      letter-spacing: 3px;
+      margin: 60px 0 30px;
+      text-shadow: 0 0 15px #ffd700;
     }
 
-    hr {
-      border: none;
-      height: 4px;
-      background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    .divider {
+      text-align: center;
       margin: 40px 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .divider img {
+      width: 80%;
+      max-width: 600px;
+      opacity: 0.8;
     }
 
     p {
@@ -82,35 +83,69 @@
       line-height: 1.8;
       text-align: justify;
       margin: 25px 0;
-      color: #3e2a1a;
-    }
-
-    .seal {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 2em;
-      color: #b8860b;
-      text-shadow: 0 0 10px #ffd700;
     }
 
     .glow {
       text-shadow: 0 0 15px #ffd700;
+      color: #ffd700;
+    }
+
+    a.magic-link {
+      color: #b8860b;
+      text-decoration: none;
+      border-bottom: 2px dotted #8b4513;
+      padding: 2px 5px;
+      transition: all 0.3s;
+      font-weight: bold;
+    }
+
+    a.magic-link:hover {
+      color: #ffd700;
+      text-shadow: 0 0 15px #ffd700;
+      border-bottom: 2px solid #ffd700;
+      background: rgba(139,69,19,0.3);
+    }
+
+    .seal {
+      text-align: center;
+      margin-top: 80px;
+      font-size: 2em;
+      color: #b8860b;
+      text-shadow: 0 0 10px #ffd700;
     }
   </style>
 </head>
 <body>
   <div class="scroll">
-    <h1 class="glow">古老魔法卷軸</h1>
-    <div class="subtitle">劉弘翔 - 11401_CS203A 課程勇者</div>
+    <h1 class="glow">程式魔法卷軸</h1>
+    <p style="text-align:center; font-size:1.6em;">劉弘翔 編撰於 2026 年</p>
+
+    <div class="chapter glow">第一章　11401_CS203A 課程卷軸</div>
+    <p class="glow" style="text-align:center; font-size:1.8em;">學號：1100860</p>
     
-    <hr>
+    <div class="divider">
+      <img src="https://www.gutenberg.org/files/45332/45332-h/images/figure36.jpg" alt="章節裝飾">
+    </div>
+
+    <p>在此卷軸之開端，記錄勇者劉弘翔於 11401_CS203A 課程的啟程。掌握程式咒語，踏上知識之冒險。</p>
+    <p>這裡將記錄所有學習心得、魔法公式（程式碼）與獲得的寶物（作業）。</p>
+
+    <!-- 你可以複製下面這段來新增第二章、第三章... -->
+    <div class="chapter glow">第二章　範例章節（請修改）</div>
     
-    <p>學號：1100860</p>
-    <p>在這片被遺忘的古老大陸上，我——劉弘翔，正手持程式咒語，踏上尋找知識之寶的旅程。</p>
-    <p>此卷軸記錄著我在 CS203A 課程中的冒險：從初學者到掌握強大魔法（程式語言）的成長歷程。</p>
-    <p>未來將在此寫下更多傳奇、完成的任務與獲得的寶物……</p>
-    
-    <div class="seal">✦ 劉弘翔 於 2026 年封印 ✦</div>
+    <div class="divider">
+      <img src="https://chairish-prod.freetls.fastly.net/image/product/master/ff4d5ebb-7073-47b1-b74c-7f5cc603cd9c/after-racinet-medieval-floral-ornament-illuminated-manuscript-motifs-plate-xlviii-1869-print-9892" alt="章節裝飾">
+    </div>
+
+    <p>這裡寫你的學習筆記內容...</p>
+    <p>參考魔法卷軸（外部連結）：</p>
+    <ul>
+      <li><a href="https://example.com" class="magic-link" target="_blank">✦ Python 基礎咒語手冊</a></li>
+      <li><a href="https://github.com/your-repo" class="magic-link" target="_blank">✦ 我的作業寶庫</a></li>
+      <li><a href="https://www.youtube.com/watch?v=example" class="magic-link" target="_blank">✦ 課程教學影片</a></li>
+    </ul>
+
+    <div class="seal">✦ 此卷軸持續更新中 ✦</div>
   </div>
 </body>
 </html>
