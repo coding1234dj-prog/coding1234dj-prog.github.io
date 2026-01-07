@@ -28,6 +28,7 @@
       box-shadow: inset 0 0 30px rgba(0,0,0,0.4), 0 0 40px rgba(139,69,19,0.6);
       border-radius: 20px;
       transform: rotate(-1deg);
+      text-align: center; /* 強制所有內容置中 */
     }
 
     h1 {
@@ -65,11 +66,14 @@
       filter: drop-shadow(0 0 25px #ffd700);
     }
 
+    /* 說明文字：真文字，置中，大小統一 */
     .description {
-      font-size: 1.6em;
-      line-height: 1.9;
-      text-align: justify;
-      margin: 40px 0;
+      font-size: 1.8em; /* 調整這裡控制大小 */
+      line-height: 2;
+      text-align: center;
+      margin: 50px auto;
+      max-width: 800px;
+      font-family: 'Uncial Antiqua', cursive; /* 奇幻手寫風 */
     }
 
     .divider img {
