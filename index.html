@@ -73,6 +73,8 @@
 
     /* 翻頁按鈕 */
     .navigation {
+      transform: scale(1.15) rotate(5deg); /* 微微旋轉，像書頁被風吹 */
+      filter: drop-shadow(0 0 10px #ffd700); /* 金色魔法光暈 */
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -102,6 +104,9 @@
       color: #000000;
       font-family: 'Cinzel', serif;
     }
+    .flip-left img {
+  transform: scaleX(-1); /* 自動左右鏡像翻轉 */
+}
   </style>
 </head>
 <body>
@@ -127,8 +132,8 @@
       </a>
       
       <!-- 下一章 -->
-      <a href="chapter2.html">
-        <img src="images/page-right.png" alt="下一頁">
+      <a href="index.html" class="flip-left">
+        <img src="images/page-right.png" alt="上一頁">
       </a>
     </div>
   </div>
