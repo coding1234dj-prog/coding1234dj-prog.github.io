@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>程式的魔法手札</title>
+  <title>程式的魔法手札 - 劉弘翔</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Cinzel&family=MedievalSharp&display=swap');
 
@@ -13,10 +13,6 @@
       background: #1a0f0a url('https://www.transparenttextures.com/patterns/wood-pattern.png') repeat;
       color: #000000;
       font-family: 'Uncial Antiqua', cursive;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background-attachment: fixed;
     }
 
@@ -30,7 +26,6 @@
       border: 20px solid transparent;
       border-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png') 30 stretch;
       box-shadow: inset 0 0 30px rgba(0,0,0,0.4), 0 0 40px rgba(139,69,19,0.6);
-      position: relative;
       border-radius: 20px;
       transform: rotate(-1deg);
     }
@@ -52,67 +47,42 @@
       font-family: 'MedievalSharp', cursive;
     }
 
-    .divider {
-      text-align: center;
-      margin: 40px 0;
-    }
-    .divider img {
-      width: 80%;
-      max-width: 600px;
-      opacity: 0.8;
-    }
-
-    /* 可點擊的圖片按鈕 */
-    .github-button {
-      text-align: center;
-      margin: 60px 0;
-    }
-    .github-button a {
-      display: inline-block;
-      transition: transform 0.3s;
-    }
-    .github-button a:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0 0 15px #ffd700);
-    }
-    .github-button img {
-      width: 70%;
-      max-width: 500px;
+    /* 圖片控制：垂直置中，自動縮放不會爆版 */
+    .chapter-image a img {
+      width: 100%;
+      max-width: 750px;
       height: auto;
+      display: block;
+      margin: 40px auto;
+      opacity: 0.95;
+      box-shadow: 0 0 30px rgba(139,69,19,0.8);
+      border-radius: 15px;
+      transition: all 0.4s;
     }
 
-    /* 說明文字 */
+    .chapter-image a:hover img {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 25px #ffd700);
+    }
+
     .description {
       font-size: 1.6em;
       line-height: 1.9;
-      text-align: center;
+      text-align: justify;
       margin: 40px 0;
     }
 
-    /* 翻頁按鈕（返回首頁） */
-    .navigation {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 60px 0 20px;
-      padding: 0 40px;
-    }
-    .navigation a {
+    .divider img {
+      width: 80%;
+      max-width: 600px;
       display: block;
-      width: 120px;
-      transition: transform 0.3s;
-    }
-    .navigation a:hover {
-      transform: scale(1.15);
-    }
-    .navigation img {
-      width: 100%;
-      height: auto;
+      margin: 60px auto;
+      opacity: 0.8;
     }
 
     .seal {
       text-align: center;
-      margin-top: 50px;
+      margin: 80px 0 40px;
       font-size: 2em;
       color: #000000;
       font-family: 'Cinzel', serif;
@@ -122,48 +92,42 @@
 <body>
   <div class="scroll">
     <h1>程式的魔法手札</h1>
-    <div class="subtitle">基礎魔法領域</div>
     <div class="subtitle">課程勇者：11401-CS203A　學號：1100860</div>
+    <div class="subtitle">這是我存放筆記與學習歷程的古老卷軸</div>
 
-    <div class="divider">
-      <img src="images/divider-black.jpg" alt="章節分隔">
+    <!-- 第一章 -->
+    <div class="chapter-image">
+      <a href="https://github.com/coding1234dj-prog/11401_CS203A" target="_blank">
+        <img src="images/chapter1.png" alt="第一章：基礎魔法書頁">
+      </a>
     </div>
-    <!-- 下面說明文字（你可以自己改） -->
+
     <div class="description">
-      <p>點擊上方魔法卷軸或圖標，即可進入我的程式碼寶庫。</p>
-      <p>這裡記錄了資料結構的基礎魔法：陣列、鏈結串列、堆疊、佇列……</p>
-      <p>所有作業與練習咒語皆在此封存，歡迎探索！</p>
+      <p>點擊上方古老魔法書，即可進入資料結構的程式碼寶庫。</p>
+      <p>陣列、鏈結串列、堆疊、佇列等基礎咒語皆在此封存，歡迎探索！</p>
     </div>
 
     <div class="seal">✦ 第一章　基礎魔法 ✦</div>
-    <div class="description">
-      <p>在此章，勇者記錄資料結構的基礎咒語與練習魔法程式。這些古老的結構（如陣列、鏈結串列、堆疊、佇列、樹木與圖形）乃是構築強大演算法的基石。</p>
-      <p>透過反覆吟唱練習程式，掌握其本質，方能於未來試煉中施展無窮變化。</p>
-    </div>
-    <!-- 可點擊的圖片按鈕（跳到 GitHub） -->
-    <div class="github-button">
-      <a href="https://github.com/coding1234dj-prog/11401_CS203A" target="_blank">
-        <img src="images/chapter1-title.webp" alt="進入資料結構魔法領域">
-      </a>
-    </div>
-    <!-- 第二章 -->
-     <div class="seal">✦ 第二章　電子之眼✦</div>
-    </div>
-    <div class="subtitle">視覺魔法——OpenCV 之眼</div>
 
-    <div class="magic-button">
-      <a href="https://github.com/coding1234dj-prog/cloud-project" target="_blank">
-        <img src="images/opencv.png" alt="進入opencv電腦視覺所見的世界">
+    <!-- 分隔線 -->
+    <div class="divider">
+      <img src="images/divider.png" alt="章節分隔">
+    </div>
+
+    <!-- 第二章 OpenCV -->
+    <div class="chapter-image">
+      <a href="你的OpenCV GitHub連結" target="_blank">
+        <img src="images/chapter2.png" alt="第二章：視覺魔法書頁">
       </a>
     </div>
 
     <div class="description">
-      <p>點擊上方法陣，召喚電腦之眼。</p>
-      <p>影像讀取、物件追蹤等視覺咒語練習記錄於此。</p>
+      <p>點擊上方黑暗魔法書，召喚電腦之眼。</p>
+      <p>OpenCV 練習：影像讀取、邊緣偵測、顏色過濾、物件追蹤等視覺咒語記錄於此。</p>
+      <p>未來將繼續鑽研更強大的視覺預言術！</p>
     </div>
 
-    <div class="seal">✦ 第二章完 ✦　卷軸待續…… ✦</div>
-    
+    <div class="seal">✦ 第二章　視覺魔法 ✦　卷軸待續…… ✦</div>
   </div>
 </body>
 </html>
