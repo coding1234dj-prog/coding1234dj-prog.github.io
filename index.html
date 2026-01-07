@@ -3,94 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>劉弘翔 - 奇幻冒險者手札</title>
+  <title>劉弘翔 - 古老卷軸手札</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/matthewbradley/oldbook.js@master/oldbook.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English+SC&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English+SC:wght@400;700&display=swap');
 
     body {
       margin: 0;
       padding: 0;
-      background: #0d0a0a url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background: #2c1810 url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
       background-size: cover;
-      color: #e0d4b3;
-      font-family: 'Cinzel', serif;
+      color: #3c2f2f;
+      font-family: 'IM Fell English SC', serif;
       text-align: center;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow-x: hidden; /* 防止橫向滾動 */
     }
 
-    .container {
-      max-width: 800px;
-      margin: 40px;
-      padding: 60px 40px;
-      background: rgba(20, 15, 10, 0.75);
-      border: 8px solid #4a2c0d;
-      border-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png') 30 stretch;
-      box-shadow: 0 0 30px rgba(139, 69, 19, 0.8);
-      border-radius: 12px;
+    .scroll-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 80px 60px;
+      background: #f5f5dc url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat; /* 羊皮紙紋理 */
+      border: 15px solid transparent;
+      border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path d="M0 0h20v20H0z" fill="%23d2b48c" opacity="0.8"/><circle cx="5" cy="5" r="1" fill="%23a0522d"/><circle cx="15" cy="15" r="1" fill="%23a0522d"/></svg>') 30 stretch; /* 簡單捲曲邊框 */
+      box-shadow: 
+        inset 0 0 50px rgba(0,0,0,0.1), /* 內陰影像卷軸 */
+        0 10px 30px rgba(0,0,0,0.5); /* 外陰影 */
+      border-radius: 20px;
       position: relative;
+      transform: rotate(-0.5deg); /* 輕微傾斜像手持卷軸 */
+      animation: subtleFloat 6s ease-in-out infinite; /* 輕微浮動動畫 */
+    }
+
+    @keyframes subtleFloat {
+      0%, 100% { transform: rotate(-0.5deg) translateY(0px); }
+      50% { transform: rotate(0.5deg) translateY(-5px); }
     }
 
     h1 {
-      font-family: 'IM Fell English SC', serif;
-      font-size: 3.5em;
-      color: #ffd700;
-      text-shadow: 0 0 10px #8b4513;
+      font-family: 'Cinzel', serif;
+      font-size: 3em;
+      color: #8b4513;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
       margin: 0 0 20px;
+      letter-spacing: 3px;
     }
 
     .subtitle {
-      font-size: 1.4em;
-      color: #c9a66b;
+      font-size: 1.3em;
+      color: #654321;
       margin-bottom: 30px;
-      letter-spacing: 2px;
+      font-style: italic;
     }
 
     hr {
       border: none;
-      height: 2px;
-      background: linear-gradient(to right, transparent, #8b4513, transparent);
+      height: 1px;
+      background: linear-gradient(to right, transparent, #a0522d, transparent);
       margin: 30px 0;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.2);
     }
 
     p {
-      font-size: 1.2em;
-      line-height: 1.7;
+      font-size: 1.1em;
+      line-height: 1.8;
       margin: 20px 0;
+      text-align: justify; /* 像書本排版 */
+      padding: 0 20px;
     }
 
     .glow {
-      text-shadow: 0 0 15px #ffd700;
+      color: #d2691e;
+      text-shadow: 1px 1px 2px rgba(210, 105, 30, 0.5);
+      font-weight: bold;
     }
 
     .footer {
       margin-top: 50px;
-      font-size: 0.9em;
-      color: #a67c52;
+      font-size: 0.8em;
+      color: #8b7355;
+      font-style: italic;
+      border-top: 1px dashed #a0522d;
+      padding-top: 20px;
+    }
+
+    /* 卷軸滾動效果：內容區可滾動 */
+    .content-scroll {
+      max-height: 400px;
+      overflow-y: auto;
+      padding-right: 10px;
+      scrollbar-width: thin;
+      scrollbar-color: #a0522d #f5f5dc;
+    }
+
+    .content-scroll::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-scroll::-webkit-scrollbar-track {
+      background: #f5f5dc;
+    }
+
+    .content-scroll::-webkit-scrollbar-thumb {
+      background: #a0522d;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="glow">DICE 冒險者手札</h1>
-    <div class="subtitle">劉弘翔 - 奇幻旅程開始</div>
+  <div class="scroll-container">
+    <h1>古老卷軸：DICE 冒險紀錄</h1>
+    <div class="subtitle">劉弘翔 - 魔法學徒的秘密手札</div>
     
     <hr>
     
-    <p>11401_CS203A 課程勇者</p>
-    <p class="glow">學號：1100860</p>
+    <div class="content-scroll">
+      <p>11401_CS203A 課程卷軸</p>
+      <p class="glow">學號：1100860</p>
+      
+      <p>在朦朧的燭光下，這卷羊皮紙記錄著我的奇幻旅程。從程式符文的初學，到召喚第一道代碼之靈，每一頁都沾滿墨跡與夢想。</p>
+      
+      <p>這裡是我的技能樹：HTML 護盾、CSS 幻術、JavaScript 召喚術。未來，我將添加更多寶物，如遊戲原型與算法神器。</p>
+      
+      <p>若你也是旅人，歡迎留言分享你的傳說…</p>
+    </div>
     
     <hr>
-    
-    <p>在這個充滿魔法與危險的世界裡，<br>
-    我正學習程式咒語，準備挑戰未來的試煉。</p>
-    
-    <p>未來將在此記錄我的冒險、技能樹與獲得的寶物…</p>
     
     <div class="footer">
-      © 2026 劉弘翔 - Powered by GitHub Pages & Ancient Magic
+      捲起這頁，繼續冒險 © 2026 劉弘翔 - 由 GitHub Pages 與古老魔法驅動
     </div>
   </div>
 </body>
